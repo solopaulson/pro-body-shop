@@ -206,7 +206,16 @@ export default function Home() {
       {/* Header */}
       <header className="w-full py-8 px-4 border-b border-gray-800">
         <div className="container mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight">{businessInfo.name}</h1>
+          <div className="flex justify-center">
+            <Image
+              src="/Pro Body Shop Black Logo.png"
+              alt={businessInfo.name}
+              width={400}
+              height={100}
+              className="w-auto h-16 md:h-20"
+              priority={true}
+            />
+          </div>
         </div>
       </header>
 
