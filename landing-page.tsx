@@ -217,7 +217,8 @@ export default function LandingPage() {
           <h2 className="text-2xl font-bold mb-4 flex items-center">
             <MapPin className="mr-2" /> Our Location
           </h2>
-          <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden border border-gray-700">
+          <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden border border-gray-700 relative">
+            <div className="absolute inset-0 bg-gray-800 animate-pulse" id="map-loading" />
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.2326144345366!2d-105.99468492346177!3d35.66096687259684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185a60197b43b1%3A0xe9946b7679c1f75a!2sPro%20Body%20Shop!5e0!3m2!1sen!2sus"
               width="100%"
@@ -227,6 +228,12 @@ export default function LandingPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Pro Body Shop Location"
+              onLoad={() => {
+                const loadingElement = document.getElementById('map-loading');
+                if (loadingElement) {
+                  loadingElement.style.display = 'none';
+                }
+              }}
             ></iframe>
           </div>
           <p className="mt-2 text-gray-400 text-center">{businessInfo.address}</p>
@@ -239,6 +246,7 @@ export default function LandingPage() {
             <a
               href={`tel:${businessInfo.phone.replace(/[^0-9]/g, "")}`}
               className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-xl flex items-center justify-center transition-colors duration-200 w-full md:w-auto"
+              aria-label={`Call ${businessInfo.phone}`}
             >
               <Phone className="mr-2" /> Call Now: {businessInfo.phone}
             </a>
