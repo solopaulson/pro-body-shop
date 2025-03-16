@@ -210,9 +210,9 @@ export default function Home() {
             <Image
               src="/Pro Body Shop Black Logo.png"
               alt={businessInfo.name}
-              width={400}
-              height={100}
-              className="w-auto h-16 md:h-20"
+              width={600}
+              height={150}
+              className="w-auto h-24 md:h-32 lg:h-40"
               priority={true}
             />
           </div>
@@ -314,9 +314,9 @@ export default function Home() {
             <Image
               src="/pro-body-shop-footer-banner.png"
               alt="Pro Body Shop Footer Banner"
-              width={1200}
-              height={200}
-              className="w-full max-w-[1200px] h-auto"
+              width={1920}
+              height={300}
+              className="w-full max-w-[1920px] h-auto"
               priority={false}
             />
           </div>
