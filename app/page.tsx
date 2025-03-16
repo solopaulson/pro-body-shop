@@ -300,7 +300,17 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-8 px-4 border-t border-gray-800">
         <div className="container mx-auto text-center text-gray-400">
-          <p>© {new Date().getFullYear()} {businessInfo.name}. All rights reserved.</p>
+          <p className="mb-6">© {new Date().getFullYear()} {businessInfo.name}. All rights reserved.</p>
+          <div className="w-full flex justify-center">
+            <Image
+              src="/pro-body-shop-footer-banner.png"
+              alt="Pro Body Shop Footer Banner"
+              width={1200}
+              height={200}
+              className="w-full max-w-[1200px] h-auto"
+              priority={false}
+            />
+          </div>
         </div>
       </footer>
     </div>
