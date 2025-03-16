@@ -10,7 +10,6 @@ import {
   Shield,
   Car,
   Truck,
-  BikeIcon as Motorcycle,
   Sparkles,
   Hammer,
   ChevronLeft,
@@ -143,7 +142,6 @@ export default function Home() {
       { name: "Lifetime Warranty", icon: <Star className="w-6 h-6" /> },
       { name: "Towing", icon: <Truck className="w-6 h-6" /> },
       { name: "Automotive Glass Replacement", icon: <Car className="w-6 h-6" /> },
-      { name: "Motorcycle Repair", icon: <Motorcycle className="w-6 h-6" /> },
       { name: "Detailing", icon: <Sparkles className="w-6 h-6" /> },
       { name: "Paintless Dent Repair", icon: <Hammer className="w-6 h-6" /> },
     ],
@@ -206,16 +204,7 @@ export default function Home() {
       {/* Header */}
       <header className="w-full py-8 px-4 border-b border-gray-800">
         <div className="container mx-auto">
-          <div className="flex justify-center">
-            <Image
-              src="/Pro Body Shop Black Logo.png"
-              alt={businessInfo.name}
-              width={600}
-              height={150}
-              className="w-auto h-24 md:h-32 lg:h-40"
-              priority={true}
-            />
-          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight">{businessInfo.name}</h1>
         </div>
       </header>
 
