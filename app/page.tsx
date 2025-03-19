@@ -202,8 +202,18 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="w-full py-8 px-4 border-b border-gray-800">
-        <div className="container mx-auto">
+      <header className="w-full py-8 px-4 border-b border-gray-800 bg-black">
+        <div className="container mx-auto flex flex-col items-center">
+          <div className="w-full max-w-[600px] mb-4">
+            <Image
+              src="/pro-body-shop-logo.png"
+              alt="Pro Body Shop Logo"
+              width={600}
+              height={200}
+              className="w-full h-auto"
+              priority={true}
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-center tracking-tight">{businessInfo.name}</h1>
         </div>
       </header>
