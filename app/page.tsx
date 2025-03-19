@@ -204,6 +204,7 @@ export default function Home() {
       {/* Header */}
       <header className="w-full py-8 px-4 border-b border-gray-800 bg-black">
         <div className="container mx-auto flex flex-col items-center">
+          {/* Main Logo */}
           <div className="w-full max-w-[600px] mb-4">
             <Image
               src="/pro-body-shop-logo.png"
